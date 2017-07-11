@@ -72,7 +72,8 @@
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.ChatActivity" />
         <activity android:name=".activity.LookActivity" />
-        <activity android:name=".activity.OpenActivity"></activity>
+        <activity android:name=".activity.OpenActivity" />
+        <activity android:name=".activity.QRcodeActivity"></activity>
     </application>
 
 </manifest>
