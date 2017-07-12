@@ -4,10 +4,98 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.tarena.yy.activity.LoginActivity">
 
+    tools:context="com.tarena.yy.activity.LoginActivity">
+    <TextView
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:text="返回"
+        android:id="@+id/login_backimage"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/fanhui1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/login_name"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/login_backimage"
+        android:background="@drawable/linerlayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="账 号:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:id="@+id/login_nameedit"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/login_password_liner"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/login_name"
+        android:background="@drawable/linerlayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="密 码:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:password="true"
+            android:id="@+id/login_passwordet"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/login_loginBtn"
+        android:background="@drawable/button_selector"
+        android:textSize="18sp"
+        android:text="登 录"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login_password_liner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/login_zhanghao"
+        android:text="还没有账号？"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/login_loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toEndOf="@+id/login_zhanghao"
+        android:id="@+id/login_register"
+        android:textColor="#000fff"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:text="马上注册>>"
+        android:layout_below="@+id/login_loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="16sp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/login_register"
+        android:text="忘记密码?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
