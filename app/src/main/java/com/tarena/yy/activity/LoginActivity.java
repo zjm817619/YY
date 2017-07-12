@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView tvBack, tvRegister;
     EditText etName, etPassword;
     Button loginBtn;
-
+    hadUser huser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UserEntity user = new UserEntity();
+                final UserEntity user = new UserEntity();
                 final String name=etName.getText().toString();
                 final String password=etPassword.getText().toString();
                 user.setUsername(name);
@@ -68,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void done(UserEntity s, BmobException e) {
                         if (e == null) {
                             Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                            huser.onhadUser(user);
                             startActivity(new Intent(LoginActivity.this,MainActivity.class));
                             new Thread(new Runnable() {
                                 @Override
@@ -95,5 +96,8 @@ public class LoginActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+    public interface hadUser{
+        void onhadUser(UserEntity user);
     }
 }

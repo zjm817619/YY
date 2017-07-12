@@ -21,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
     TextView tvBack;
     EditText etName,etPassword;
     Button registerBtn;
-    hadUser huser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
                                 Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
                                 startActivity(intent);
-                                huser.onhadUser(user);
+
                                 new Thread(new Runnable() {
                                     @Override
                                     public void run() {
@@ -82,7 +82,5 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-    public interface hadUser{
-        void onhadUser(UserEntity user);
-    }
+
 }
