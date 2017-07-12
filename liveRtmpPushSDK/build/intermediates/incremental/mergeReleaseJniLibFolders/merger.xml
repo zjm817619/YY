@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\YY\liveRtmpPushSDK\src\main\jniLibs"><file name="armeabi/libAvcEncoder.so" path="C:\YY\liveRtmpPushSDK\src\main\jniLibs\armeabi\libAvcEncoder.so"/><file name="armeabi/librtmp.so" path="C:\YY\liveRtmpPushSDK\src\main\jniLibs\armeabi\librtmp.so"/></source><source path="C:\YY\liveRtmpPushSDK\src\main\libs"/></dataSet><dataSet config="release"><source path="C:\YY\liveRtmpPushSDK\src\release\jniLibs"/></dataSet></merger>
