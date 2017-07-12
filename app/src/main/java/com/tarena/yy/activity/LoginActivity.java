@@ -68,8 +68,11 @@ public class LoginActivity extends AppCompatActivity {
                     public void done(UserEntity s, BmobException e) {
                         if (e == null) {
                             Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                            huser.onhadUser(user);
-                            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                            try {
+                                huser.onhadUser(user);
+                            }catch (Exception el){
+                                el.printStackTrace();
+                            }
                             new Thread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -79,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                                             EMClient.getInstance().groupManager().loadAllGroups();
                                             EMClient.getInstance().chatManager().loadAllConversations();
                                             Log.d("main", "登录聊天服务器成功！");
+                                            startActivity(new Intent(LoginActivity.this,MainActivity.class));
                                         }
                                         @Override
                                         public void onError(int code, String error) {

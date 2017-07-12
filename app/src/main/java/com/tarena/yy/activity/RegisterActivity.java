@@ -61,14 +61,13 @@ public class RegisterActivity extends AppCompatActivity {
                         public void done(UserEntity s, BmobException e) {
                             if (e==null){
                                 Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
-                                startActivity(intent);
-
                                 new Thread(new Runnable() {
                                     @Override
                                     public void run() {
                                         try {
                                             EMClient.getInstance().createAccount(name,password);
+                                            Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
+                                            startActivity(intent);
                                         }catch (Exception e){
                                             e.printStackTrace();
                                         }
