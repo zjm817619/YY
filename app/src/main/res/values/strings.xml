@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">+YY</string>
+    <string name="SwitchCamera">切换前后摄像头</string>
 </resources>
